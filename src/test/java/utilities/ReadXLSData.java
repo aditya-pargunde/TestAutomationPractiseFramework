@@ -5,7 +5,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.lang.reflect.Method;
 
-import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -15,37 +14,53 @@ import org.testng.annotations.DataProvider;
 
 public class ReadXLSData {
 
-    @DataProvider(name = "GUIElementTest")
-    public Object[][] getData(Method m) throws EncryptedDocumentException, IOException {
-        File file = new File(System.getProperty("user.dir") + "/src/test/resources/testdata/GUICalendarTestData.xlsx");
+    @DataProvider(name = "FormData")
+    public Object[][] getFormData() throws IOException {
+        File file = new File(System.getProperty("user.dir") + "/src/test/resources/testdata/FormAndCalendarTest.xlsx");
         FileInputStream fis = new FileInputStream(file);
         Workbook workbook = WorkbookFactory.create(fis);
 
-        Sheet guiSheet = workbook.getSheet("GUIElementTest");
-        int totalRowsGUI = guiSheet.getPhysicalNumberOfRows();
-        int totalColumnsGUI = guiSheet.getRow(0).getPhysicalNumberOfCells();
+        Sheet formSheet = workbook.getSheet("FormData");
+        int totalRows = formSheet.getPhysicalNumberOfRows();
+        int totalCols = formSheet.getRow(0).getPhysicalNumberOfCells();
 
-        Sheet dateSheet = workbook.getSheet("DatePickerTest");
-        int totalRowsDate = dateSheet.getPhysicalNumberOfRows();
-        int totalColumnsDate = dateSheet.getRow(0).getPhysicalNumberOfCells();
-
-        int totalRows = Math.min(totalRowsGUI, totalRowsDate);
-        int totalColumns = totalColumnsGUI + totalColumnsDate;
-
-        Object[][] testData = new Object[totalRows - 1][totalColumns];
+        Object[][] data = new Object[totalRows - 1][totalCols];
         DataFormatter format = new DataFormatter();
 
         for (int i = 1; i < totalRows; i++) {
-            for (int j = 0; j < totalColumnsGUI; j++) {
-                testData[i - 1][j] = format.formatCellValue(guiSheet.getRow(i).getCell(j));
-            }
-            for (int k = 0; k < totalColumnsDate; k++) {
-                testData[i - 1][totalColumnsGUI + k] = format.formatCellValue(dateSheet.getRow(i).getCell(k));
+            Row row = formSheet.getRow(i);
+            for (int j = 0; j < totalCols; j++) {
+                data[i - 1][j] = format.formatCellValue(row.getCell(j));
             }
         }
 
         workbook.close();
         fis.close();
-        return testData;
+        return data;
+    }
+
+    @DataProvider(name = "CalendarData")
+    public Object[][] getCalendarData() throws IOException {
+        File file = new File(System.getProperty("user.dir") + "/src/test/resources/testdata/FormAndCalendarTest.xlsx");
+        FileInputStream fis = new FileInputStream(file);
+        Workbook workbook = WorkbookFactory.create(fis);
+
+        Sheet dateSheet = workbook.getSheet("CalendarData");
+        int totalRows = dateSheet.getPhysicalNumberOfRows();
+        int totalCols = dateSheet.getRow(0).getPhysicalNumberOfCells();
+
+        Object[][] data = new Object[totalRows - 1][totalCols];
+        DataFormatter format = new DataFormatter();
+
+        for (int i = 1; i < totalRows; i++) {
+            Row row = dateSheet.getRow(i);
+            for (int j = 0; j < totalCols; j++) {
+                data[i - 1][j] = format.formatCellValue(row.getCell(j));
+            }
+        }
+
+        workbook.close();
+        fis.close();
+        return data;
     }
 }

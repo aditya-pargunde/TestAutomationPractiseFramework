@@ -7,7 +7,8 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="guiElementsTest"/>
+          <include name="testCalendar"/>
+          <include name="testForm"/>
         </methods>
       </class> <!-- testcase.LocatorsAndActionsPractise -->
     </classes>
