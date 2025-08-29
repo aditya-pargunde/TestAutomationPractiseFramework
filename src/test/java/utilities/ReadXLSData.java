@@ -14,53 +14,47 @@ import org.testng.annotations.DataProvider;
 
 public class ReadXLSData {
 
-    @DataProvider(name = "FormData")
-    public Object[][] getFormData() throws IOException {
-        File file = new File(System.getProperty("user.dir") + "/src/test/resources/testdata/FormAndCalendarTest.xlsx");
-        FileInputStream fis = new FileInputStream(file);
-        Workbook workbook = WorkbookFactory.create(fis);
+	@DataProvider(name = "FormCalendarData")
+	public Object[][] getFormAndCalendarData() throws IOException {
+	    File file = new File(System.getProperty("user.dir") + "/src/test/resources/testdata/FormAndCalendarTest.xlsx");
+	    FileInputStream fis = new FileInputStream(file);
+	    Workbook workbook = WorkbookFactory.create(fis);
 
-        Sheet formSheet = workbook.getSheet("FormData");
-        int totalRows = formSheet.getPhysicalNumberOfRows();
-        int totalCols = formSheet.getRow(0).getPhysicalNumberOfCells();
+	    // --- Form sheet ---
+	    Sheet formSheet = workbook.getSheet("FormData");
+	    int formRows = formSheet.getPhysicalNumberOfRows();
+	    int formCols = formSheet.getRow(0).getPhysicalNumberOfCells();
 
-        Object[][] data = new Object[totalRows - 1][totalCols];
-        DataFormatter format = new DataFormatter();
+	    // --- Calendar sheet ---
+	    Sheet calSheet = workbook.getSheet("CalendarData");
+	    int calRows = calSheet.getPhysicalNumberOfRows();
+	    int calCols = calSheet.getRow(0).getPhysicalNumberOfCells();
 
-        for (int i = 1; i < totalRows; i++) {
-            Row row = formSheet.getRow(i);
-            for (int j = 0; j < totalCols; j++) {
-                data[i - 1][j] = format.formatCellValue(row.getCell(j));
-            }
-        }
+	    // assume both sheets have same #rows
+	    int totalRows = Math.min(formRows, calRows);
 
-        workbook.close();
-        fis.close();
-        return data;
-    }
+	    Object[][] data = new Object[totalRows - 1][formCols + calCols];
+	    DataFormatter format = new DataFormatter();
 
-    @DataProvider(name = "CalendarData")
-    public Object[][] getCalendarData() throws IOException {
-        File file = new File(System.getProperty("user.dir") + "/src/test/resources/testdata/FormAndCalendarTest.xlsx");
-        FileInputStream fis = new FileInputStream(file);
-        Workbook workbook = WorkbookFactory.create(fis);
+	    for (int i = 1; i < totalRows; i++) {
+	        Row formRow = formSheet.getRow(i);
+	        Row calRow = calSheet.getRow(i);
 
-        Sheet dateSheet = workbook.getSheet("CalendarData");
-        int totalRows = dateSheet.getPhysicalNumberOfRows();
-        int totalCols = dateSheet.getRow(0).getPhysicalNumberOfCells();
+	        // form values
+	        for (int j = 0; j < formCols; j++) {
+	            data[i - 1][j] = format.formatCellValue(formRow.getCell(j));
+	        }
 
-        Object[][] data = new Object[totalRows - 1][totalCols];
-        DataFormatter format = new DataFormatter();
+	        // calendar values
+	        for (int k = 0; k < calCols; k++) {
+	            data[i - 1][formCols + k] = format.formatCellValue(calRow.getCell(k));
+	        }
+	    }
 
-        for (int i = 1; i < totalRows; i++) {
-            Row row = dateSheet.getRow(i);
-            for (int j = 0; j < totalCols; j++) {
-                data[i - 1][j] = format.formatCellValue(row.getCell(j));
-            }
-        }
-
-        workbook.close();
-        fis.close();
-        return data;
-    }
+	    workbook.close();
+	    fis.close();
+	    return data;
+	}
 }
+
+
