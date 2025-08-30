@@ -9,6 +9,7 @@ import pages.GUIBookTablePage;
 import pages.GUICalendarPage;
 import pages.GUIFormPage;
 import pages.PaginationWebTable;
+import pages.mouseActionsAtRightTabs;
 import utilities.ReadXLSData;
 
 public class LocatorsAndActionsPractise extends BaseTest {
@@ -22,6 +23,7 @@ public class LocatorsAndActionsPractise extends BaseTest {
 		GUICalendarPage calendarPage = new GUICalendarPage(driver);
 		GUIBookTablePage bookTablePage = new GUIBookTablePage(driver);
 		PaginationWebTable paginationTable = new PaginationWebTable(driver);
+		mouseActionsAtRightTabs mouseActions = new mouseActionsAtRightTabs(driver);
 
 		// --- Fill Form ---
 		formPage.enterName(name);
@@ -44,5 +46,15 @@ public class LocatorsAndActionsPractise extends BaseTest {
 		bookTablePage.printBookDetails(bookName);
 		
 		paginationTable.selectProductCheckbox(productName);
+		paginationTable.clickFooterHome();
+		mouseActions.wikiSearch();
+		mouseActions.simpleAlert();
+		mouseActions.ConfirmationAlert();
+		mouseActions.promptAlert();
+		mouseActions.copyText();
+		mouseActions.dragAndDrop(); 
+		mouseActions.priceRangeSlider();
+		mouseActions.brokenLinks();
+		
 	}
 }
