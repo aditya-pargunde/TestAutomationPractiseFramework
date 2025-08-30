@@ -15,7 +15,7 @@ public class ReadXLSData {
 
     @DataProvider(name = "FormCalendarData")
     public Object[][] getFormAndCalendarData() throws IOException {
-        File file = new File(System.getProperty("user.dir") + "/src/test/resources/testdata/GUIFormCalendarElementsTestData.xlsx");
+        File file = new File(System.getProperty("user.dir") + "/src/test/resources/testdata/YeNayiSheetHai.xlsx");
         FileInputStream fis = new FileInputStream(file);
         Workbook workbook = WorkbookFactory.create(fis);
 
@@ -27,7 +27,7 @@ public class ReadXLSData {
 
         int totalRows = Math.min(formRows, calRows);
 
-        int formCols = 10; // name,email,phone,address,gender,country,colour,animal,dayOfWeek,bookName
+        int formCols = 11; // name,email,phone,address,gender,country,colour,animal,dayOfWeek,bookName, productName
         int calCols = 3;   // calDay, calMonth, calYear
 
         Object[][] data = new Object[totalRows - 1][formCols + calCols];

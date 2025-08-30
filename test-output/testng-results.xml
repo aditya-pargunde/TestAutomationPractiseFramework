@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-30T12:24:37 IST" name="Default suite" finished-at="2025-08-30T12:25:21 IST" duration-ms="44470">
+  <suite started-at="2025-08-30T14:25:03 IST" name="Default suite" finished-at="2025-08-30T14:25:55 IST" duration-ms="52137">
     <groups>
     </groups>
-    <test started-at="2025-08-30T12:24:37 IST" name="Default test" finished-at="2025-08-30T12:25:21 IST" duration-ms="44470">
+    <test started-at="2025-08-30T14:25:03 IST" name="Default test" finished-at="2025-08-30T14:25:55 IST" duration-ms="52137">
       <class name="testcase.LocatorsAndActionsPractise">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcase.LocatorsAndActionsPractise@65e98b1c]" started-at="2025-08-30T12:24:37 IST" name="setUp" finished-at="2025-08-30T12:24:46 IST" duration-ms="8349" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcase.LocatorsAndActionsPractise@6ad82709]" started-at="2025-08-30T14:25:04 IST" name="setUp" finished-at="2025-08-30T14:25:11 IST" duration-ms="7554" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="fillFormAndSelectDate(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.LocatorsAndActionsPractise@65e98b1c]" started-at="2025-08-30T12:24:46 IST" name="fillFormAndSelectDate" data-provider="FormCalendarData" finished-at="2025-08-30T12:24:47 IST" duration-ms="1113" status="PASS">
+        <test-method signature="fillFormAndSelectDate(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.LocatorsAndActionsPractise@6ad82709]" started-at="2025-08-30T14:25:11 IST" name="fillFormAndSelectDate" data-provider="FormCalendarData" finished-at="2025-08-30T14:25:13 IST" duration-ms="1389" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -65,15 +65,20 @@
             </param>
             <param index="10">
               <value>
-                <![CDATA[15]]>
+                <![CDATA[Laptop]]>
               </value>
             </param>
             <param index="11">
               <value>
-                <![CDATA[August]]>
+                <![CDATA[15]]>
               </value>
             </param>
             <param index="12">
+              <value>
+                <![CDATA[August]]>
+              </value>
+            </param>
+            <param index="13">
               <value>
                 <![CDATA[2025]]>
               </value>
@@ -82,15 +87,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fillFormAndSelectDate -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcase.LocatorsAndActionsPractise@65e98b1c]" started-at="2025-08-30T12:24:47 IST" name="tearDown" finished-at="2025-08-30T12:24:47 IST" duration-ms="117" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcase.LocatorsAndActionsPractise@6ad82709]" started-at="2025-08-30T14:25:13 IST" name="tearDown" finished-at="2025-08-30T14:25:13 IST" duration-ms="134" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcase.LocatorsAndActionsPractise@65e98b1c]" started-at="2025-08-30T12:24:47 IST" name="setUp" finished-at="2025-08-30T12:24:55 IST" duration-ms="8300" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcase.LocatorsAndActionsPractise@6ad82709]" started-at="2025-08-30T14:25:13 IST" name="setUp" finished-at="2025-08-30T14:25:22 IST" duration-ms="8844" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="fillFormAndSelectDate(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.LocatorsAndActionsPractise@65e98b1c]" started-at="2025-08-30T12:24:55 IST" name="fillFormAndSelectDate" data-provider="FormCalendarData" finished-at="2025-08-30T12:24:58 IST" duration-ms="2502" status="PASS">
+        <test-method signature="fillFormAndSelectDate(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.LocatorsAndActionsPractise@6ad82709]" started-at="2025-08-30T14:25:22 IST" name="fillFormAndSelectDate" data-provider="FormCalendarData" finished-at="2025-08-30T14:25:24 IST" duration-ms="2331" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -144,15 +149,20 @@
             </param>
             <param index="10">
               <value>
-                <![CDATA[20]]>
+                <![CDATA[Action Camera]]>
               </value>
             </param>
             <param index="11">
               <value>
-                <![CDATA[September]]>
+                <![CDATA[20]]>
               </value>
             </param>
             <param index="12">
+              <value>
+                <![CDATA[September]]>
+              </value>
+            </param>
+            <param index="13">
               <value>
                 <![CDATA[2024]]>
               </value>
@@ -161,15 +171,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fillFormAndSelectDate -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcase.LocatorsAndActionsPractise@65e98b1c]" started-at="2025-08-30T12:24:58 IST" name="tearDown" finished-at="2025-08-30T12:24:58 IST" duration-ms="124" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcase.LocatorsAndActionsPractise@6ad82709]" started-at="2025-08-30T14:25:24 IST" name="tearDown" finished-at="2025-08-30T14:25:24 IST" duration-ms="115" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcase.LocatorsAndActionsPractise@65e98b1c]" started-at="2025-08-30T12:24:58 IST" name="setUp" finished-at="2025-08-30T12:25:07 IST" duration-ms="8664" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcase.LocatorsAndActionsPractise@6ad82709]" started-at="2025-08-30T14:25:24 IST" name="setUp" finished-at="2025-08-30T14:25:30 IST" duration-ms="5911" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="fillFormAndSelectDate(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.LocatorsAndActionsPractise@65e98b1c]" started-at="2025-08-30T12:25:07 IST" name="fillFormAndSelectDate" data-provider="FormCalendarData" finished-at="2025-08-30T12:25:09 IST" duration-ms="2302" status="PASS">
+        <test-method signature="fillFormAndSelectDate(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.LocatorsAndActionsPractise@6ad82709]" started-at="2025-08-30T14:25:30 IST" name="fillFormAndSelectDate" data-provider="FormCalendarData" finished-at="2025-08-30T14:25:33 IST" duration-ms="3091" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -223,15 +233,20 @@
             </param>
             <param index="10">
               <value>
-                <![CDATA[5]]>
+                <![CDATA[Fitness Tracker]]>
               </value>
             </param>
             <param index="11">
               <value>
-                <![CDATA[October]]>
+                <![CDATA[5]]>
               </value>
             </param>
             <param index="12">
+              <value>
+                <![CDATA[October]]>
+              </value>
+            </param>
+            <param index="13">
               <value>
                 <![CDATA[2026]]>
               </value>
@@ -240,15 +255,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fillFormAndSelectDate -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcase.LocatorsAndActionsPractise@65e98b1c]" started-at="2025-08-30T12:25:09 IST" name="tearDown" finished-at="2025-08-30T12:25:09 IST" duration-ms="117" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcase.LocatorsAndActionsPractise@6ad82709]" started-at="2025-08-30T14:25:33 IST" name="tearDown" finished-at="2025-08-30T14:25:33 IST" duration-ms="125" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcase.LocatorsAndActionsPractise@65e98b1c]" started-at="2025-08-30T12:25:09 IST" name="setUp" finished-at="2025-08-30T12:25:19 IST" duration-ms="9465" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcase.LocatorsAndActionsPractise@6ad82709]" started-at="2025-08-30T14:25:33 IST" name="setUp" finished-at="2025-08-30T14:25:40 IST" duration-ms="6620" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="fillFormAndSelectDate(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.LocatorsAndActionsPractise@65e98b1c]" started-at="2025-08-30T12:25:19 IST" name="fillFormAndSelectDate" data-provider="FormCalendarData" finished-at="2025-08-30T12:25:21 IST" duration-ms="2669" status="PASS">
+        <test-method signature="fillFormAndSelectDate(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.LocatorsAndActionsPractise@6ad82709]" started-at="2025-08-30T14:25:40 IST" name="fillFormAndSelectDate" data-provider="FormCalendarData" finished-at="2025-08-30T14:25:44 IST" duration-ms="3658" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -302,15 +317,20 @@
             </param>
             <param index="10">
               <value>
-                <![CDATA[10]]>
+                <![CDATA[Wireless Mouse 20]]>
               </value>
             </param>
             <param index="11">
               <value>
-                <![CDATA[December]]>
+                <![CDATA[10]]>
               </value>
             </param>
             <param index="12">
+              <value>
+                <![CDATA[December]]>
+              </value>
+            </param>
+            <param index="13">
               <value>
                 <![CDATA[2023]]>
               </value>
@@ -319,7 +339,91 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fillFormAndSelectDate -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcase.LocatorsAndActionsPractise@65e98b1c]" started-at="2025-08-30T12:25:21 IST" name="tearDown" finished-at="2025-08-30T12:25:21 IST" duration-ms="111" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcase.LocatorsAndActionsPractise@6ad82709]" started-at="2025-08-30T14:25:44 IST" name="tearDown" finished-at="2025-08-30T14:25:44 IST" duration-ms="121" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcase.LocatorsAndActionsPractise@6ad82709]" started-at="2025-08-30T14:25:44 IST" name="setUp" finished-at="2025-08-30T14:25:52 IST" duration-ms="8127" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="fillFormAndSelectDate(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.LocatorsAndActionsPractise@6ad82709]" started-at="2025-08-30T14:25:52 IST" name="fillFormAndSelectDate" data-provider="FormCalendarData" finished-at="2025-08-30T14:25:55 IST" duration-ms="3326" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[John Cena]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[john@cena.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[987654321]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[United States of America]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Male]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[United States]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Blue]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Elephant]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Wednesday]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Random book]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Ye to Pata nahi]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[July]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[2027]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillFormAndSelectDate -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcase.LocatorsAndActionsPractise@6ad82709]" started-at="2025-08-30T14:25:55 IST" name="tearDown" finished-at="2025-08-30T14:25:55 IST" duration-ms="110" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

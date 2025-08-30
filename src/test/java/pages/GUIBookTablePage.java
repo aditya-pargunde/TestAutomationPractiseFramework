@@ -24,7 +24,7 @@ public class GUIBookTablePage {
 
             if (currentBook.equalsIgnoreCase(bookName)) {
                 List<WebElement> cells = row.findElements(By.tagName("td"));
-                System.out.println("BookName: " + cells.get(0).getText() +
+                System.out.println("✅BookName: " + cells.get(0).getText() +
                                    ", Author: " + cells.get(1).getText() +
                                    ", Subject: " + cells.get(2).getText() +
                                    ", Price: " + cells.get(3).getText());
