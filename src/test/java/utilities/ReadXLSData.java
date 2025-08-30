@@ -3,7 +3,6 @@ package utilities;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.lang.reflect.Method;
 
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Row;
@@ -14,47 +13,47 @@ import org.testng.annotations.DataProvider;
 
 public class ReadXLSData {
 
-	@DataProvider(name = "FormCalendarData")
-	public Object[][] getFormAndCalendarData() throws IOException {
-	    File file = new File(System.getProperty("user.dir") + "/src/test/resources/testdata/FormAndCalendarTest.xlsx");
-	    FileInputStream fis = new FileInputStream(file);
-	    Workbook workbook = WorkbookFactory.create(fis);
+    @DataProvider(name = "FormCalendarData")
+    public Object[][] getFormAndCalendarData() throws IOException {
+        File file = new File(System.getProperty("user.dir") + "/src/test/resources/testdata/GUIFormCalendarElementsTestData.xlsx");
+        FileInputStream fis = new FileInputStream(file);
+        Workbook workbook = WorkbookFactory.create(fis);
 
-	    // --- Form sheet ---
-	    Sheet formSheet = workbook.getSheet("FormData");
-	    int formRows = formSheet.getPhysicalNumberOfRows();
-	    int formCols = formSheet.getRow(0).getPhysicalNumberOfCells();
+        Sheet formSheet = workbook.getSheet("FormData");
+        Sheet calSheet = workbook.getSheet("CalendarData");
 
-	    // --- Calendar sheet ---
-	    Sheet calSheet = workbook.getSheet("CalendarData");
-	    int calRows = calSheet.getPhysicalNumberOfRows();
-	    int calCols = calSheet.getRow(0).getPhysicalNumberOfCells();
+        int formRows = formSheet.getPhysicalNumberOfRows();
+        int calRows = calSheet.getPhysicalNumberOfRows();
 
-	    // assume both sheets have same #rows
-	    int totalRows = Math.min(formRows, calRows);
+        int totalRows = Math.min(formRows, calRows);
 
-	    Object[][] data = new Object[totalRows - 1][formCols + calCols];
-	    DataFormatter format = new DataFormatter();
+        int formCols = 10; // name,email,phone,address,gender,country,colour,animal,dayOfWeek,bookName
+        int calCols = 3;   // calDay, calMonth, calYear
 
-	    for (int i = 1; i < totalRows; i++) {
-	        Row formRow = formSheet.getRow(i);
-	        Row calRow = calSheet.getRow(i);
+        Object[][] data = new Object[totalRows - 1][formCols + calCols];
+        DataFormatter format = new DataFormatter();
 
-	        // form values
-	        for (int j = 0; j < formCols; j++) {
-	            data[i - 1][j] = format.formatCellValue(formRow.getCell(j));
-	        }
+        for (int i = 1; i < totalRows; i++) {
+            Row formRow = formSheet.getRow(i);
+            Row calRow = calSheet.getRow(i);
 
-	        // calendar values
-	        for (int k = 0; k < calCols; k++) {
-	            data[i - 1][formCols + k] = format.formatCellValue(calRow.getCell(k));
-	        }
-	    }
+            // --- Form data ---
+            for (int j = 0; j < formCols; j++) {
+                String val = "";
+                if (formRow.getCell(j) != null) val = format.formatCellValue(formRow.getCell(j)).trim();
+                data[i - 1][j] = val;
+            }
 
-	    workbook.close();
-	    fis.close();
-	    return data;
-	}
+            // --- Calendar data ---
+            for (int k = 0; k < calCols; k++) {
+                String val = "";
+                if (calRow.getCell(k) != null) val = format.formatCellValue(calRow.getCell(k)).trim();
+                data[i - 1][formCols + k] = val;
+            }
+        }
+
+        workbook.close();
+        fis.close();
+        return data;
+    }
 }
-
-

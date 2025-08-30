@@ -17,13 +17,12 @@ public class BaseTest {
 
     @BeforeMethod
     public void setUp() throws IOException {
-        // Load browser & baseURL from testdata.properties
         testData = new Properties();
         FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/test/resources/testdata.properties");
         testData.load(fis);
 
         String browser = testData.getProperty("browser");
-        if(browser.equalsIgnoreCase("chrome")) {
+        if (browser.equalsIgnoreCase("chrome")) {
             ChromeOptions options = new ChromeOptions();
             driver = new ChromeDriver(options);
         }
@@ -35,7 +34,7 @@ public class BaseTest {
 
     @AfterMethod
     public void tearDown() {
-        if(driver != null) {
+        if (driver != null) {
             driver.quit();
         }
     }

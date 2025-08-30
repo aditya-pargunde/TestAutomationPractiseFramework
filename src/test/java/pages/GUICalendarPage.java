@@ -1,12 +1,18 @@
 package pages;
 
+import java.time.Duration;
+import java.util.Arrays;
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class GUICalendarPage {
 
     private WebDriver driver;
-
     private By dateField = By.id("datepicker");
     private By monthYearLocator = By.className("ui-datepicker-title");
     private By nextButton = By.className("ui-datepicker-next");
@@ -20,16 +26,21 @@ public class GUICalendarPage {
         driver.findElement(dateField).click();
     }
 
-    public void selectDate(String targetDay, String targetMonth, String targetYear) throws InterruptedException {
+    public void selectDate(String targetDay, String targetMonth, String targetYear) {
         openCalendar();
 
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
         while (true) {
-            String displayedText = driver.findElement(monthYearLocator).getText();
+            WebElement monthYearElement = wait.until(ExpectedConditions.visibilityOfElementLocated(monthYearLocator));
+            String displayedText = monthYearElement.getText();
             String[] parts = displayedText.split(" ");
             String displayedMonth = parts[0];
             String displayedYear = parts[1];
 
-            if (displayedMonth.equalsIgnoreCase(targetMonth) && displayedYear.equals(targetYear)) break;
+            if (displayedMonth.equalsIgnoreCase(targetMonth) && displayedYear.equals(targetYear)) {
+                break;
+            }
 
             int displayedYearInt = Integer.parseInt(displayedYear);
             int targetYearInt = Integer.parseInt(targetYear);
@@ -37,19 +48,17 @@ public class GUICalendarPage {
             int displayedMonthIndex = getMonthIndex(displayedMonth);
             int targetMonthIndex = getMonthIndex(targetMonth);
 
-            if (displayedYearInt > targetYearInt || 
+            if (displayedYearInt > targetYearInt ||
                 (displayedYearInt == targetYearInt && displayedMonthIndex > targetMonthIndex)) {
-                driver.findElement(prevButton).click();
+                wait.until(ExpectedConditions.elementToBeClickable(prevButton)).click();
             } else {
-                driver.findElement(nextButton).click();
+                wait.until(ExpectedConditions.elementToBeClickable(nextButton)).click();
             }
-            Thread.sleep(500);
         }
 
-        driver.findElement(
-        	    By.xpath("//td[not(contains(@class,'ui-datepicker-other-month'))]/a[text()='" + Integer.parseInt(targetDay) + "']"))
-        	    .click();
-
+        // Select the day once the correct month/year is displayed
+        String dayXpath = "//td[not(contains(@class,'ui-datepicker-other-month'))]/a[text()='" + Integer.parseInt(targetDay) + "']";
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(dayXpath))).click();
     }
 
     public String getSelectedDate() {
@@ -59,21 +68,10 @@ public class GUICalendarPage {
     }
 
     public int getMonthIndex(String month) {
-        String[] months = {
-            "january", "february", "march", "april", "may", "june",
-            "july", "august", "september", "october", "november", "december"
-        };
-        for (int i = 0; i < months.length; i++) {
-            if (months[i].equalsIgnoreCase(month)) {
-                return i;
-            }
-        }
-        return -1; // invalid month
-    }
-   
-
-    private String getMonthName(int month) {
-        String[] months = {"January","February","March","April","May","June","July","August","September","October","November","December"};
-        return months[month-1];
+        List<String> months = Arrays.asList(
+            "january","february","march","april","may","june",
+            "july","august","september","october","november","december"
+        );
+        return months.indexOf(month.toLowerCase());
     }
 }
