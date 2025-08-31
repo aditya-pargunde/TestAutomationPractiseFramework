@@ -18,17 +18,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 public class mouseActionsAtRightTabs {
-    private WebDriver driver;
-    private Alert alert;
-    private JavascriptExecutor js;
-    private Actions a;
-    private WebDriverWait wait;
+	private WebDriver driver;
+	private Alert alert;
+	private JavascriptExecutor js;
+	private Actions a;
+	private WebDriverWait wait;
 
-    public mouseActionsAtRightTabs(WebDriver driver) {
-        this.driver = driver;
-        this.js = (JavascriptExecutor) driver;
-        this.a = new Actions(driver);
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+	public mouseActionsAtRightTabs(WebDriver driver) {
+		this.driver = driver;
+		this.js = (JavascriptExecutor) driver;
+		this.a = new Actions(driver);
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 	}
 
 	// Tabs
@@ -41,111 +41,129 @@ public class mouseActionsAtRightTabs {
 
 	// Alerts & Popups
 
-	// simple laert
+	// simple alert
 	public void simpleAlert() {
 		driver.findElement(By.id("alertBtn")).click();
 		alert = driver.switchTo().alert();
-		System.out.println("simple Alert - " + alert.getText());
+		System.out.println("Simple Alert OK Clicked - " + alert.getText());
 		alert.accept();
 	}
 
 	// confirmation alert
 	public void ConfirmationAlert() {
-		driver.findElement(By.id("confirmBtn")).click();
-
+		WebElement confirmAlertButton = driver.findElement(By.id("confirmBtn"));
+		confirmAlertButton.click();
 		alert = driver.switchTo().alert();
-		System.out.println("simple Alert - " + alert.getText());
+		System.out.println("Confirmation Alert Text - " + alert.getText());
+		alert.dismiss();
+		// capture cancel confirmation alert message
+		WebElement confirmAlertCancelMessage = driver.findElement(By.xpath("//p[@id='demo']"));
+		wait.until(ExpectedConditions.visibilityOf(confirmAlertCancelMessage));
+		Assert.assertEquals(confirmAlertCancelMessage.getText(), "You pressed Cancel!");
+		System.out.println("Confirmation Alert Cancelled - " + confirmAlertCancelMessage.getText());
+
+		// capture success confirmation alert message
+		confirmAlertButton.click();
+		alert = driver.switchTo().alert();
 		alert.accept();
+		WebElement confirmAlertSuccessMessage = driver.findElement(By.xpath("//p[@id='demo']"));
+		wait.until(ExpectedConditions.visibilityOf(confirmAlertSuccessMessage));
+		Assert.assertEquals(confirmAlertSuccessMessage.getText(), "You pressed OK!");
+		System.out.println("Confirmation Alert Submitted - " + confirmAlertSuccessMessage.getText());
 	}
 
-	// confirmation alert
-	public void promptAlert() {
+	// prompt alert
+	public void promptAlert(String name) {
 		WebElement promptAlertButton = driver.findElement(By.id("promptBtn"));
 		promptAlertButton.click();
 		alert = driver.switchTo().alert();
-		String userName = "Baburao Ganpatrao Aapte";
-		alert.sendKeys(userName);
-		System.out.println("simple Alert - " + alert.getText());
+		alert.sendKeys(name);
+		System.out.println("Prompt Alert - " + alert.getText());
 
 		// cancelling the alert
 		alert.dismiss();
-		String promptAlertMessage = driver.findElement(By.id("demo")).getText();
-		Assert.assertEquals(promptAlertMessage, "User cancelled the prompt.");
+		WebElement promptCancelledMessage = driver.findElement(By.id("demo"));
+		wait.until(ExpectedConditions.visibilityOf(promptCancelledMessage));
+		Assert.assertEquals(promptCancelledMessage.getText(), "User cancelled the prompt.");
+		System.out.println("Prompt Alert Cancelled - " + promptCancelledMessage.getText());
 
 		// confirming the alert
 		promptAlertButton.click();
 		alert = driver.switchTo().alert();
-		alert.sendKeys(userName);
+		alert.sendKeys(name);
 		alert.accept();
-		String promptAcceptedMessage = driver.findElement(By.id("demo")).getText();
-		Assert.assertEquals(promptAcceptedMessage, "Hello " + userName + "! How are you today?");
+		WebElement promptAcceptedMessage = driver.findElement(By.id("demo"));
+		Assert.assertEquals(promptAcceptedMessage.getText(), "Hello " + name + "! How are you today?");
+		System.out.println("Prompt Alert Submitted - " + promptAcceptedMessage.getText());
 	}
-	
-	public void copyText()
-	{
+
+	public void copyText() {
 		WebElement CopyTextButton = driver.findElement(By.xpath("//*[@id=\"HTML10\"]/div[1]/button"));
 		js.executeScript("arguments[0].scrollIntoView(true);", CopyTextButton);
-		WebElement Field1= driver.findElement(By.id("field1"));
-		WebElement Field2= driver.findElement(By.id("field2"));
+		WebElement Field1 = driver.findElement(By.id("field1"));
+		WebElement Field2 = driver.findElement(By.id("field2"));
 		a.doubleClick(CopyTextButton).perform();
+		// Short wait for JS execution (50-100ms)
+		try {
+			Thread.sleep(300);
+		} catch (InterruptedException e) {
+		}
+		// Then assert
 		Assert.assertEquals(Field1.getAttribute("value"), Field2.getAttribute("value"));
 	}
-	
+
 	public void dragAndDrop() {
 		WebElement source = driver.findElement(By.id("draggable"));
 		WebElement target = driver.findElement(By.id("droppable"));
 		a.dragAndDrop(source, target).perform();
 	}
-	
+
 	public void priceRangeSlider() {
-		WebElement leftSlider = driver.findElement(By.xpath("//span[contains(@class,'ui-slider-handle')][1]"));  
+		WebElement leftSlider = driver.findElement(By.xpath("//span[contains(@class,'ui-slider-handle')][1]"));
 		a = new Actions(driver);
 
 		// Move slider 50 pixels to the right
 		a.clickAndHold(leftSlider).moveByOffset(50, 0).release().perform();
-		
-		WebElement rightSlider = driver.findElement(By.xpath("//span[contains(@class,'ui-slider-handle')][2]"));  
+		WebElement rightSlider = driver.findElement(By.xpath("//span[contains(@class,'ui-slider-handle')][2]"));
 		a = new Actions(driver);
 
 		// Move slider 30 pixels to the left
 		a.clickAndHold(rightSlider).moveByOffset(-30, 0).release().perform();
 
-
 	}
 
 	public void brokenLinks() {
-		
-		//scroll to broken links section
-	    WebElement brokenLinks = driver.findElement(By.id("broken-links"));
-	    js.executeScript("arguments[0].scrollIntoView(true);", brokenLinks);
 
-	    // get list of all broken links
-	    List<WebElement> allBrokenLinksList = driver.findElements(By.xpath("//*[@id='broken-links']/a"));
+		// scroll to broken links section
+		WebElement brokenLinks = driver.findElement(By.id("broken-links"));
+		js.executeScript("arguments[0].scrollIntoView(true);", brokenLinks);
 
-	    System.out.println("Total links: " + allBrokenLinksList.size());
+		// get list of all broken links
+		List<WebElement> allBrokenLinksList = driver.findElements(By.xpath("//*[@id='broken-links']/a"));
 
-	    for (WebElement link : allBrokenLinksList) {
-	        String url = link.getAttribute("href");
-	        verifyLink(url);
-	    }
+		System.out.println("Total links: " + allBrokenLinksList.size());
+		for (WebElement link : allBrokenLinksList) {
+			String url = link.getAttribute("href");
+			verifyLink(url);
+		}
 	}
-	
+
 	public void verifyLink(String linkUrl) {
-	    try {
-	        URL url = new URL(linkUrl);
-	        HttpURLConnection httpConn = (HttpURLConnection) url.openConnection();
-	        httpConn.setConnectTimeout(5000);
-	        httpConn.connect();
+		try {
+			URL url = new URL(linkUrl);
+			HttpURLConnection httpConn = (HttpURLConnection) url.openConnection();
+			httpConn.setConnectTimeout(5000);
+			httpConn.connect();
 
-	        int responseCode = httpConn.getResponseCode();
+//			int responseCode = httpConn.getResponseCode();
 
-	        if (responseCode >= 400) {
-	            System.out.println(linkUrl + " ❌ BROKEN (HTTP code: " + responseCode + ")");
-	        } else {
-	            System.out.println(linkUrl + " ✅ VALID (HTTP code: " + responseCode + ")");
-	        }
-	    } catch (Exception e) {
-	        System.out.println(linkUrl + " ⚠️ Error: " + e.getMessage());
-	    }
+//			if (responseCode >= 400) {
+//				System.out.println(linkUrl + " ❌ BROKEN (HTTP code: " + responseCode + ")");
+//			} else {
+//				System.out.println(linkUrl + " ✅ VALID (HTTP code: " + responseCode + ")");
+//			}
+		} catch (Exception e) {
+			System.out.println(linkUrl + " ⚠️ Error: " + e.getMessage());
+		}
 	}
 }

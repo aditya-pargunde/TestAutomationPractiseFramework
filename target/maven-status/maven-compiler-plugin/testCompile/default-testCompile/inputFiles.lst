@@ -1,5 +1,10 @@
 /Users/adityapargunde/eclipse-workspace/TestAutomationPractiseFramework/src/test/java/base/BaseTest.java
-/Users/adityapargunde/eclipse-workspace/TestAutomationPractiseFramework/src/test/java/testcase/ConfigReader.java
+/Users/adityapargunde/eclipse-workspace/TestAutomationPractiseFramework/src/test/java/pages/GUIBookTablePage.java
+/Users/adityapargunde/eclipse-workspace/TestAutomationPractiseFramework/src/test/java/pages/GUICalendarPage.java
+/Users/adityapargunde/eclipse-workspace/TestAutomationPractiseFramework/src/test/java/pages/GUIFormPage.java
+/Users/adityapargunde/eclipse-workspace/TestAutomationPractiseFramework/src/test/java/pages/PaginationWebTable.java
+/Users/adityapargunde/eclipse-workspace/TestAutomationPractiseFramework/src/test/java/pages/mouseActionsAtRightTabs.java
 /Users/adityapargunde/eclipse-workspace/TestAutomationPractiseFramework/src/test/java/testcase/LocatorsAndActionsPractise.java
-/Users/adityapargunde/eclipse-workspace/TestAutomationPractiseFramework/src/test/java/testcase/ReusableMethods.java
+/Users/adityapargunde/eclipse-workspace/TestAutomationPractiseFramework/src/test/java/utilities/ExtentManager.java
+/Users/adityapargunde/eclipse-workspace/TestAutomationPractiseFramework/src/test/java/utilities/ExtentTestNGListener.java
 /Users/adityapargunde/eclipse-workspace/TestAutomationPractiseFramework/src/test/java/utilities/ReadXLSData.java

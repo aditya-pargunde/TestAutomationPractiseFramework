@@ -41,8 +41,8 @@ public class PaginationWebTable {
 					if (!productCheckbox.isSelected()) {
 						wait.until(ExpectedConditions.elementToBeClickable(productCheckbox)).click();
 					}
-					Assert.assertTrue(productCheckbox.isSelected(), "❌ " + productName + " checkbox is NOT selected");
-					System.out.println("✅ Selected product: " + productName);
+					Assert.assertTrue(productCheckbox.isSelected(), " " + productName + " checkbox is NOT selected");
+					System.out.println("📦 Selected product: " + productName);
 					found = true;
 					break;
 				}
@@ -59,7 +59,7 @@ public class PaginationWebTable {
 				// Wait until table reloads (first row changes)
 				wait.until(ExpectedConditions.stalenessOf(tableRows.get(0)));
 			} catch (Exception e) {
-				System.out.println("❌ " + productName + " not found in table after checking all pages.");
+				System.out.println(" " + productName + " not found in table after checking all pages.");
 				break;
 			}
 		}
@@ -71,6 +71,6 @@ public class PaginationWebTable {
 		// Wait for full page load (document.readyState = complete)
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState")
-				.equals("complete"));	
+				.equals("complete"));
 	}
 }

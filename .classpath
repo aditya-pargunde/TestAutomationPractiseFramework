@@ -36,15 +36,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Users/adityapargunde/.m2/repository/org/apache/poi/poi/5.4.1/poi-5.4.1.jar" sourcepath="/Users/adityapargunde/.m2/repository/org/apache/poi/poi/5.4.1/poi-5.4.1-sources.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="org.apache.poi"/>
-			<attribute name="maven.artifactId" value="poi"/>
-			<attribute name="maven.version" value="5.4.1"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

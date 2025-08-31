@@ -12,66 +12,64 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class GUICalendarPage {
 
-    private WebDriver driver;
-    private By dateField = By.id("datepicker");
-    private By monthYearLocator = By.className("ui-datepicker-title");
-    private By nextButton = By.className("ui-datepicker-next");
-    private By prevButton = By.className("ui-datepicker-prev");
+	private WebDriver driver;
+	private WebDriverWait wait;
 
-    public GUICalendarPage(WebDriver driver) {
-        this.driver = driver;
-    }
+	private By dateField = By.id("datepicker");
+	private By monthYearLocator = By.className("ui-datepicker-title");
+	private By nextButton = By.className("ui-datepicker-next");
+	private By prevButton = By.className("ui-datepicker-prev");
 
-    public void openCalendar() {
-        driver.findElement(dateField).click();
-    }
+	// Constructor
+	public GUICalendarPage(WebDriver driver) {
+		this.driver = driver;
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	}
 
-    public void selectDate(String targetDay, String targetMonth, String targetYear) {
-        openCalendar();
+	public void openCalendar() {
+		driver.findElement(dateField).click();
+	}
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	public void selectDate(String targetDay, String targetMonth, String targetYear) {
+		openCalendar();
 
-        while (true) {
-            WebElement monthYearElement = wait.until(ExpectedConditions.visibilityOfElementLocated(monthYearLocator));
-            String displayedText = monthYearElement.getText();
-            String[] parts = displayedText.split(" ");
-            String displayedMonth = parts[0];
-            String displayedYear = parts[1];
+		while (true) {
+			WebElement monthYearElement = wait.until(ExpectedConditions.visibilityOfElementLocated(monthYearLocator));
+			String displayedText = monthYearElement.getText();
+			String[] parts = displayedText.split(" ");
+			String displayedMonth = parts[0];
+			String displayedYear = parts[1];
 
-            if (displayedMonth.equalsIgnoreCase(targetMonth) && displayedYear.equals(targetYear)) {
-                break;
-            }
+			if (displayedMonth.equalsIgnoreCase(targetMonth) && displayedYear.equals(targetYear)) {
+				break;
+			}
 
-            int displayedYearInt = Integer.parseInt(displayedYear);
-            int targetYearInt = Integer.parseInt(targetYear);
+			int displayedYearInt = Integer.parseInt(displayedYear);
+			int targetYearInt = Integer.parseInt(targetYear);
 
-            int displayedMonthIndex = getMonthIndex(displayedMonth);
-            int targetMonthIndex = getMonthIndex(targetMonth);
+			int displayedMonthIndex = getMonthIndex(displayedMonth);
+			int targetMonthIndex = getMonthIndex(targetMonth);
 
-            if (displayedYearInt > targetYearInt ||
-                (displayedYearInt == targetYearInt && displayedMonthIndex > targetMonthIndex)) {
-                wait.until(ExpectedConditions.elementToBeClickable(prevButton)).click();
-            } else {
-                wait.until(ExpectedConditions.elementToBeClickable(nextButton)).click();
-            }
-        }
+			if (displayedYearInt > targetYearInt
+					|| (displayedYearInt == targetYearInt && displayedMonthIndex > targetMonthIndex)) {
+				wait.until(ExpectedConditions.elementToBeClickable(prevButton)).click();
+			} else {
+				wait.until(ExpectedConditions.elementToBeClickable(nextButton)).click();
+			}
+		}
 
-        // Select the day once the correct month/year is displayed
-        String dayXpath = "//td[not(contains(@class,'ui-datepicker-other-month'))]/a[text()='" + Integer.parseInt(targetDay) + "']";
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(dayXpath))).click();
-    }
+		String day = "//td[not(contains(@class,'ui-datepicker-other-month'))]/a[text()='" + Integer.parseInt(targetDay)
+				+ "']";
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(day))).click();
+	}
 
-    public String getSelectedDate() {
-        String date = driver.findElement(dateField).getAttribute("value");
-        System.out.println("Selected Date: " + date);
-        return date;
-    }
+	public String getSelectedDate() {
+		return driver.findElement(dateField).getAttribute("value");
+	}
 
-    public int getMonthIndex(String month) {
-        List<String> months = Arrays.asList(
-            "january","february","march","april","may","june",
-            "july","august","september","october","november","december"
-        );
-        return months.indexOf(month.toLowerCase());
-    }
+	private int getMonthIndex(String month) {
+		List<String> months = Arrays.asList("january", "february", "march", "april", "may", "june", "july", "august",
+				"september", "october", "november", "december");
+		return months.indexOf(month.toLowerCase());
+	}
 }

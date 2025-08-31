@@ -1,5 +1,10 @@
 utilities/ReadXLSData.class
+utilities/ExtentManager.class
+pages/GUICalendarPage.class
+utilities/ExtentTestNGListener.class
+pages/GUIBookTablePage.class
+pages/PaginationWebTable.class
 testcase/LocatorsAndActionsPractise.class
-testcase/ReusableMethods.class
+pages/mouseActionsAtRightTabs.class
+pages/GUIFormPage.class
 base/BaseTest.class
-testcase/ConfigReader.class

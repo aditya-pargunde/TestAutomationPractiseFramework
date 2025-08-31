@@ -1,0 +1,60 @@
+package utilities;
+
+import base.BaseTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class ExtentTestNGListener implements ITestListener {
+
+	private static ExtentReports extent = ExtentManager.getReporter();
+	private static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
+
+	@Override
+	public void onTestStart(ITestResult result) {
+		ExtentTest extentTest = extent.createTest(result.getMethod().getMethodName());
+		test.set(extentTest);
+	}
+
+	@Override
+	public void onTestSuccess(ITestResult result) {
+		test.get().log(Status.PASS, "Test passed");
+	}
+
+	@Override
+	public void onTestFailure(ITestResult result) {
+		test.get().log(Status.FAIL, result.getThrowable());
+
+		// ✅ use BaseTest.getDriver()
+		WebDriver driver = BaseTest.getDriver();
+		if (driver != null) {
+			try {
+				File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+				String screenshotPath = System.getProperty("user.dir") + "/screenshots/"
+						+ result.getMethod().getMethodName() + ".png";
+				Files.createDirectories(Paths.get(System.getProperty("user.dir") + "/screenshots/"));
+				Files.copy(srcFile.toPath(), Paths.get(screenshotPath));
+				test.get().addScreenCaptureFromPath(screenshotPath);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	@Override
+	public void onFinish(ITestContext context) {
+		extent.flush();
+	}
+}
