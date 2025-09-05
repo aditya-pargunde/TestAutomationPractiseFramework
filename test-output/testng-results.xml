@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-05T16:44:16 IST" name="Default suite" finished-at="2025-09-05T16:46:32 IST" duration-ms="136369">
+  <suite started-at="2025-09-05T18:38:47 IST" name="Default suite" finished-at="2025-09-05T18:41:51 IST" duration-ms="184331">
     <groups>
     </groups>
-    <test started-at="2025-09-05T16:44:16 IST" name="Default test" finished-at="2025-09-05T16:46:32 IST" duration-ms="136369">
+    <test started-at="2025-09-05T18:38:47 IST" name="Default test" finished-at="2025-09-05T18:41:51 IST" duration-ms="184331">
       <class name="testcase.LocatorsAndActionsPractise">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcase.LocatorsAndActionsPractise@8c3b9d]" started-at="2025-09-05T16:44:16 IST" name="setUp" finished-at="2025-09-05T16:44:28 IST" duration-ms="11304" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcase.LocatorsAndActionsPractise@18317edc]" started-at="2025-09-05T18:38:48 IST" name="setUp" finished-at="2025-09-05T18:38:59 IST" duration-ms="11699" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="fillFormAndSelectDate(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.LocatorsAndActionsPractise@8c3b9d]" started-at="2025-09-05T16:44:28 IST" name="fillFormAndSelectDate" data-provider="FormCalendarData" finished-at="2025-09-05T16:44:41 IST" duration-ms="13868" status="PASS">
+        <test-method signature="fillFormAndSelectDate(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.LocatorsAndActionsPractise@18317edc]" started-at="2025-09-05T18:38:59 IST" name="fillFormAndSelectDate" data-provider="FormCalendarData" finished-at="2025-09-05T18:39:16 IST" duration-ms="16336" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -87,15 +87,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fillFormAndSelectDate -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcase.LocatorsAndActionsPractise@8c3b9d]" started-at="2025-09-05T16:44:41 IST" name="tearDown" finished-at="2025-09-05T16:44:42 IST" duration-ms="126" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcase.LocatorsAndActionsPractise@18317edc]" started-at="2025-09-05T18:39:16 IST" name="tearDown" finished-at="2025-09-05T18:39:16 IST" duration-ms="137" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcase.LocatorsAndActionsPractise@8c3b9d]" started-at="2025-09-05T16:44:42 IST" name="setUp" finished-at="2025-09-05T16:44:49 IST" duration-ms="7497" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcase.LocatorsAndActionsPractise@18317edc]" started-at="2025-09-05T18:39:16 IST" name="setUp" finished-at="2025-09-05T18:39:24 IST" duration-ms="7764" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="fillFormAndSelectDate(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.LocatorsAndActionsPractise@8c3b9d]" started-at="2025-09-05T16:44:49 IST" name="fillFormAndSelectDate" data-provider="FormCalendarData" finished-at="2025-09-05T16:45:06 IST" duration-ms="16776" status="PASS">
+        <test-method signature="fillFormAndSelectDate(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.LocatorsAndActionsPractise@18317edc]" started-at="2025-09-05T18:39:24 IST" name="fillFormAndSelectDate" data-provider="FormCalendarData" finished-at="2025-09-05T18:40:15 IST" duration-ms="51617" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -171,15 +171,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fillFormAndSelectDate -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcase.LocatorsAndActionsPractise@8c3b9d]" started-at="2025-09-05T16:45:06 IST" name="tearDown" finished-at="2025-09-05T16:45:06 IST" duration-ms="119" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcase.LocatorsAndActionsPractise@18317edc]" started-at="2025-09-05T18:40:15 IST" name="tearDown" finished-at="2025-09-05T18:40:15 IST" duration-ms="143" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcase.LocatorsAndActionsPractise@8c3b9d]" started-at="2025-09-05T16:45:06 IST" name="setUp" finished-at="2025-09-05T16:45:15 IST" duration-ms="8988" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcase.LocatorsAndActionsPractise@18317edc]" started-at="2025-09-05T18:40:15 IST" name="setUp" finished-at="2025-09-05T18:40:25 IST" duration-ms="9125" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="fillFormAndSelectDate(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.LocatorsAndActionsPractise@8c3b9d]" started-at="2025-09-05T16:45:15 IST" name="fillFormAndSelectDate" data-provider="FormCalendarData" finished-at="2025-09-05T16:45:32 IST" duration-ms="16930" status="PASS">
+        <test-method signature="fillFormAndSelectDate(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.LocatorsAndActionsPractise@18317edc]" started-at="2025-09-05T18:40:25 IST" name="fillFormAndSelectDate" data-provider="FormCalendarData" finished-at="2025-09-05T18:40:37 IST" duration-ms="12396" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -255,15 +255,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fillFormAndSelectDate -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcase.LocatorsAndActionsPractise@8c3b9d]" started-at="2025-09-05T16:45:32 IST" name="tearDown" finished-at="2025-09-05T16:45:32 IST" duration-ms="131" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcase.LocatorsAndActionsPractise@18317edc]" started-at="2025-09-05T18:40:37 IST" name="tearDown" finished-at="2025-09-05T18:40:37 IST" duration-ms="130" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcase.LocatorsAndActionsPractise@8c3b9d]" started-at="2025-09-05T16:45:32 IST" name="setUp" finished-at="2025-09-05T16:45:43 IST" duration-ms="10652" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcase.LocatorsAndActionsPractise@18317edc]" started-at="2025-09-05T18:40:37 IST" name="setUp" finished-at="2025-09-05T18:40:44 IST" duration-ms="7323" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="fillFormAndSelectDate(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.LocatorsAndActionsPractise@8c3b9d]" started-at="2025-09-05T16:45:43 IST" name="fillFormAndSelectDate" data-provider="FormCalendarData" finished-at="2025-09-05T16:45:58 IST" duration-ms="15434" status="PASS">
+        <test-method signature="fillFormAndSelectDate(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.LocatorsAndActionsPractise@18317edc]" started-at="2025-09-05T18:40:44 IST" name="fillFormAndSelectDate" data-provider="FormCalendarData" finished-at="2025-09-05T18:41:00 IST" duration-ms="15786" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -339,15 +339,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fillFormAndSelectDate -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcase.LocatorsAndActionsPractise@8c3b9d]" started-at="2025-09-05T16:45:58 IST" name="tearDown" finished-at="2025-09-05T16:45:58 IST" duration-ms="126" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcase.LocatorsAndActionsPractise@18317edc]" started-at="2025-09-05T18:41:00 IST" name="tearDown" finished-at="2025-09-05T18:41:00 IST" duration-ms="121" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcase.LocatorsAndActionsPractise@8c3b9d]" started-at="2025-09-05T16:45:58 IST" name="setUp" finished-at="2025-09-05T16:46:07 IST" duration-ms="8878" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcase.LocatorsAndActionsPractise@18317edc]" started-at="2025-09-05T18:41:00 IST" name="setUp" finished-at="2025-09-05T18:41:08 IST" duration-ms="7648" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="fillFormAndSelectDate(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.LocatorsAndActionsPractise@8c3b9d]" started-at="2025-09-05T16:46:07 IST" name="fillFormAndSelectDate" data-provider="FormCalendarData" finished-at="2025-09-05T16:46:32 IST" duration-ms="24682" status="PASS">
+        <test-method signature="fillFormAndSelectDate(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.LocatorsAndActionsPractise@18317edc]" started-at="2025-09-05T18:41:08 IST" name="fillFormAndSelectDate" data-provider="FormCalendarData" finished-at="2025-09-05T18:41:51 IST" duration-ms="42864" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -420,10 +420,77 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":".wikipedia\-search\-input"}
+  (Session info: chrome=140.0.7339.80)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.4.1', java.version: '23.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b456f8692e3e5e5930c3d02ad12e746b, findElement {using=class name, value=wikipedia-search-input}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.80, chrome: {chromedriverVersion: 140.0.7339.80 (670b6f192f46..., userDataDir: /var/folders/fh/mrx4vbm562g...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51527}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51527/devtoo..., se:cdpVersion: 140.0.7339.80, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b456f8692e3e5e5930c3d02ad12e746b]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".wikipedia\-search\-input"}
+  (Session info: chrome=140.0.7339.80)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.4.1', java.version: '23.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b456f8692e3e5e5930c3d02ad12e746b, findElement {using=class name, value=wikipedia-search-input}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.80, chrome: {chromedriverVersion: 140.0.7339.80 (670b6f192f46..., userDataDir: /var/folders/fh/mrx4vbm562g...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51527}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51527/devtoo..., se:cdpVersion: 140.0.7339.80, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b456f8692e3e5e5930c3d02ad12e746b
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+at pages.mouseActionsAtRightTabs.wikiSearch(mouseActionsAtRightTabs.java:22)
+at testcase.LocatorsAndActionsPractise.fillFormAndSelectDate(LocatorsAndActionsPractise.java:62)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fillFormAndSelectDate -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcase.LocatorsAndActionsPractise@8c3b9d]" started-at="2025-09-05T16:46:32 IST" name="tearDown" finished-at="2025-09-05T16:46:32 IST" duration-ms="130" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcase.LocatorsAndActionsPractise@18317edc]" started-at="2025-09-05T18:41:51 IST" name="tearDown" finished-at="2025-09-05T18:41:51 IST" duration-ms="133" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

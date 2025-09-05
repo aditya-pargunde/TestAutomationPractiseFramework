@@ -1,4 +1,5 @@
 /Users/adityapargunde/eclipse-workspace/TestAutomationPractiseFramework/src/test/java/base/BaseTest.java
+/Users/adityapargunde/eclipse-workspace/TestAutomationPractiseFramework/src/test/java/pages/BasePage.java
 /Users/adityapargunde/eclipse-workspace/TestAutomationPractiseFramework/src/test/java/pages/GUIBookTablePage.java
 /Users/adityapargunde/eclipse-workspace/TestAutomationPractiseFramework/src/test/java/pages/GUICalendarPage.java
 /Users/adityapargunde/eclipse-workspace/TestAutomationPractiseFramework/src/test/java/pages/GUIFormPage.java
@@ -8,3 +9,4 @@
 /Users/adityapargunde/eclipse-workspace/TestAutomationPractiseFramework/src/test/java/utilities/ExtentManager.java
 /Users/adityapargunde/eclipse-workspace/TestAutomationPractiseFramework/src/test/java/utilities/ExtentTestNGListener.java
 /Users/adityapargunde/eclipse-workspace/TestAutomationPractiseFramework/src/test/java/utilities/ReadXLSData.java
+/Users/adityapargunde/eclipse-workspace/TestAutomationPractiseFramework/src/test/java/utilities/ScreenshotUtil.java

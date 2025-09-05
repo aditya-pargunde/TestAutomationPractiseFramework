@@ -32,26 +32,6 @@ public class ExtentTestNGListener implements ITestListener {
 	public void onTestSuccess(ITestResult result) {
 		test.get().log(Status.PASS, "Test passed");
 	}
-
-//	@Override
-//	public void onTestFailure(ITestResult result) {
-//		test.get().log(Status.FAIL, result.getThrowable());
-//
-//		// use BaseTest.getDriver()
-//		WebDriver driver = BaseTest.getDriver();
-//		if (driver != null) {
-//			try {
-//				File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-//				String screenshotPath = System.getProperty("user.dir") + "/screenshots/"
-//						+ result.getMethod().getMethodName() + ".png";
-//				Files.createDirectories(Paths.get(System.getProperty("user.dir") + "/screenshots/"));
-//				Files.copy(srcFile.toPath(), Paths.get(screenshotPath));
-//				test.get().addScreenCaptureFromPath(screenshotPath);
-//			} catch (IOException e) {
-//				e.printStackTrace();
-//			}
-//		}
-//	}
 	
 	@Override
 	public void onTestFailure(ITestResult result) {

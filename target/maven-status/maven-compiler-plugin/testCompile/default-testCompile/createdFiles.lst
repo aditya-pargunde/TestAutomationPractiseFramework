@@ -1,7 +1,9 @@
 utilities/ReadXLSData.class
 utilities/ExtentManager.class
+pages/BasePage.class
 pages/GUICalendarPage.class
 utilities/ExtentTestNGListener.class
+utilities/ScreenshotUtil.class
 pages/GUIBookTablePage.class
 pages/PaginationWebTable.class
 testcase/LocatorsAndActionsPractise.class
