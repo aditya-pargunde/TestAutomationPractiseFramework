@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>4/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Aug 31 22:43:43 IST 2025</td>
+<td>Started on:</td><td>Tue Sep 02 00:57:47 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>142 seconds (142242 ms)</td>
+<tr><td>Total time:</td><td>106 seconds (106347 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,25 +76,33 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testcase.LocatorsAndActionsPractise.fillFormAndSelectDate()'><b>fillFormAndSelectDate</b><br>Test class: testcase.LocatorsAndActionsPractise<br>Parameters: Anita, test@example.com, 7890, SusGaon, Female, India, Yellow, Zebra, Friday, Learn Selenium, Wireless Mouse 20, 10, December, 2023</td>
-<td><div><pre>java.lang.AssertionError: expected [] but found [Hello World!]
-	at pages.mouseActionsAtRightTabs.copyText(mouseActionsAtRightTabs.java:95)
-	at testcase.LocatorsAndActionsPractise.fillFormAndSelectDate(LocatorsAndActionsPractise.java:62)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+<td title='testcase.LocatorsAndActionsPractise.fillFormAndSelectDate()'><b>fillFormAndSelectDate</b><br>Test class: testcase.LocatorsAndActionsPractise<br>Parameters: Aditya, aditya@xyz.com, 1234, Pune, Male, India, Blue, Dog, Monday, Learn Selenium, Laptop, 15, August, 2025</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for Attribute or property &apos;value&apos; to be &apos;Hello World!&apos;. Current value: &apos;&apos; (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;15.4.1&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: /var/folders/fh/mrx4vbm562g...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53936}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:53936/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b5d5078e47866087fb85763354ce5660
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.mouseActionsAtRightTabs.copyText(mouseActionsAtRightTabs.java:106)
+	at testcase.LocatorsAndActionsPractise.fillFormAndSelectDate(LocatorsAndActionsPractise.java:65)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1575)
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace910175705", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace910175705'><pre>java.lang.AssertionError: expected [] but found [Hello World!]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at pages.mouseActionsAtRightTabs.copyText(mouseActionsAtRightTabs.java:95)
-	at testcase.LocatorsAndActionsPractise.fillFormAndSelectDate(LocatorsAndActionsPractise.java:62)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace426418420", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace426418420'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for Attribute or property &apos;value&apos; to be &apos;Hello World!&apos;. Current value: &apos;&apos; (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;15.4.1&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: /var/folders/fh/mrx4vbm562g...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53936}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:53936/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b5d5078e47866087fb85763354ce5660
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.mouseActionsAtRightTabs.copyText(mouseActionsAtRightTabs.java:106)
+	at testcase.LocatorsAndActionsPractise.fillFormAndSelectDate(LocatorsAndActionsPractise.java:65)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -105,15 +113,19 @@ function toggleAllBoxes() {
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1575)
 </pre></div></td>
 <td>11</td>
-<td>testcase.LocatorsAndActionsPractise@198b6731</td></tr>
+<td>testcase.LocatorsAndActionsPractise@79079097</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -124,25 +136,25 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testcase.LocatorsAndActionsPractise.fillFormAndSelectDate()'><b>fillFormAndSelectDate</b><br>Test class: testcase.LocatorsAndActionsPractise<br>Parameters: John Cena, john@cena.com, 987654321, United States of America, Male, United States, Blue, Elephant, Wednesday, Random book, Ye to Pata nahi, 10, July, 2027</td>
-<td></td>
-<td>26</td>
-<td>testcase.LocatorsAndActionsPractise@198b6731</td></tr>
-<tr>
 <td title='testcase.LocatorsAndActionsPractise.fillFormAndSelectDate()'><b>fillFormAndSelectDate</b><br>Test class: testcase.LocatorsAndActionsPractise<br>Parameters: Gauravi, gaura@busy.com, 3456, Uruli, Female, India, Red, Cat, Sunday, Learn JS, Action Camera, 20, September, 2024</td>
 <td></td>
-<td>16</td>
-<td>testcase.LocatorsAndActionsPractise@198b6731</td></tr>
-<tr>
-<td title='testcase.LocatorsAndActionsPractise.fillFormAndSelectDate()'><b>fillFormAndSelectDate</b><br>Test class: testcase.LocatorsAndActionsPractise<br>Parameters: Aditya, aditya@xyz.com, 1234, Pune, Male, India, Blue, Dog, Monday, Learn Selenium, Laptop, 15, August, 2025</td>
-<td></td>
-<td>18</td>
-<td>testcase.LocatorsAndActionsPractise@198b6731</td></tr>
+<td>12</td>
+<td>testcase.LocatorsAndActionsPractise@79079097</td></tr>
 <tr>
 <td title='testcase.LocatorsAndActionsPractise.fillFormAndSelectDate()'><b>fillFormAndSelectDate</b><br>Test class: testcase.LocatorsAndActionsPractise<br>Parameters: Rajan, rajan@test.com, 5678, Solapur, Male, India, Green, Giraffe, Tuesday, Master in Java, Fitness Tracker, 5, October, 2026</td>
 <td></td>
-<td>18</td>
-<td>testcase.LocatorsAndActionsPractise@198b6731</td></tr>
+<td>10</td>
+<td>testcase.LocatorsAndActionsPractise@79079097</td></tr>
+<tr>
+<td title='testcase.LocatorsAndActionsPractise.fillFormAndSelectDate()'><b>fillFormAndSelectDate</b><br>Test class: testcase.LocatorsAndActionsPractise<br>Parameters: Anita, test@example.com, 7890, SusGaon, Female, India, Yellow, Zebra, Friday, Learn Selenium, Wireless Mouse 20, 10, December, 2023</td>
+<td></td>
+<td>11</td>
+<td>testcase.LocatorsAndActionsPractise@79079097</td></tr>
+<tr>
+<td title='testcase.LocatorsAndActionsPractise.fillFormAndSelectDate()'><b>fillFormAndSelectDate</b><br>Test class: testcase.LocatorsAndActionsPractise<br>Parameters: John Cena, john@cena.com, 987654321, United States of America, Male, United States, Blue, Elephant, Wednesday, Random book, Ye to Pata nahi, 10, July, 2027</td>
+<td></td>
+<td>22</td>
+<td>testcase.LocatorsAndActionsPractise@79079097</td></tr>
 </table><p>
 </body>
 </html>

@@ -2,6 +2,7 @@ package testcase;
 
 import java.io.IOException;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
@@ -11,21 +12,24 @@ import pages.GUIFormPage;
 import pages.PaginationWebTable;
 import pages.mouseActionsAtRightTabs;
 import utilities.ReadXLSData;
+import utilities.ExtentTestNGListener;
 
+@Listeners(ExtentTestNGListener.class)
 public class LocatorsAndActionsPractise extends BaseTest {
 
     @Test(dataProviderClass = ReadXLSData.class, dataProvider = "FormCalendarData", threadPoolSize = 4)
     public void fillFormAndSelectDate(String name, String email, String phone, String address, String gender,
-                                      String country, String colour, String animal, String dayOfWeek, 
+                                      String country, String colour, String animal, String dayOfWeek,
                                       String bookName, String productName, String calDay,
-                                      String calMonth, String calYear) 
+                                      String calMonth, String calYear)
                                       throws IOException, InterruptedException {
+        System.out.println("Thread: " + Thread.currentThread().getId() + " | Browser started for user: " + name);
 
-        GUIFormPage formPage = new GUIFormPage(getDriver());
-        GUICalendarPage calendarPage = new GUICalendarPage(getDriver());
-        GUIBookTablePage bookTablePage = new GUIBookTablePage(getDriver());
-        PaginationWebTable paginationTable = new PaginationWebTable(getDriver());
-        mouseActionsAtRightTabs mouseActions = new mouseActionsAtRightTabs(getDriver());
+        GUIFormPage formPage = new GUIFormPage();
+        GUICalendarPage calendarPage = new GUICalendarPage();
+        GUIBookTablePage bookTablePage = new GUIBookTablePage();
+        PaginationWebTable paginationTable = new PaginationWebTable();
+        mouseActionsAtRightTabs mouseActions = new mouseActionsAtRightTabs();
 
         // --- Fill Form ---
         formPage.enterName(name);
@@ -62,6 +66,6 @@ public class LocatorsAndActionsPractise extends BaseTest {
         mouseActions.copyText();
         mouseActions.dragAndDrop();
         mouseActions.priceRangeSlider();
-		mouseActions.brokenLinks();
-	}
+        mouseActions.brokenLinks();
+    }
 }

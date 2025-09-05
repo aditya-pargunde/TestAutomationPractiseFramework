@@ -33,25 +33,40 @@ public class ExtentTestNGListener implements ITestListener {
 		test.get().log(Status.PASS, "Test passed");
 	}
 
+//	@Override
+//	public void onTestFailure(ITestResult result) {
+//		test.get().log(Status.FAIL, result.getThrowable());
+//
+//		// use BaseTest.getDriver()
+//		WebDriver driver = BaseTest.getDriver();
+//		if (driver != null) {
+//			try {
+//				File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+//				String screenshotPath = System.getProperty("user.dir") + "/screenshots/"
+//						+ result.getMethod().getMethodName() + ".png";
+//				Files.createDirectories(Paths.get(System.getProperty("user.dir") + "/screenshots/"));
+//				Files.copy(srcFile.toPath(), Paths.get(screenshotPath));
+//				test.get().addScreenCaptureFromPath(screenshotPath);
+//			} catch (IOException e) {
+//				e.printStackTrace();
+//			}
+//		}
+//	}
+	
 	@Override
 	public void onTestFailure(ITestResult result) {
-		test.get().log(Status.FAIL, result.getThrowable());
+	    test.get().log(Status.FAIL, result.getThrowable());
 
-		// ✅ use BaseTest.getDriver()
-		WebDriver driver = BaseTest.getDriver();
-		if (driver != null) {
-			try {
-				File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-				String screenshotPath = System.getProperty("user.dir") + "/screenshots/"
-						+ result.getMethod().getMethodName() + ".png";
-				Files.createDirectories(Paths.get(System.getProperty("user.dir") + "/screenshots/"));
-				Files.copy(srcFile.toPath(), Paths.get(screenshotPath));
-				test.get().addScreenCaptureFromPath(screenshotPath);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
+	    // Get WebDriver from BaseTest
+	    WebDriver driver = BaseTest.getDriver();
+	    if (driver != null) {
+	        // Capture screenshot with unique timestamp
+			String screenshotPath = ScreenshotUtil.captureScreenshot(driver, result.getMethod().getMethodName());
+			// Add screenshot to report
+			test.get().addScreenCaptureFromPath(screenshotPath);
+	    }
 	}
+
 
 	@Override
 	public void onFinish(ITestContext context) {
