@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>5/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Sep 05 18:38:47 IST 2025</td>
+<td>Started on:</td><td>Sat Sep 06 18:57:45 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>184 seconds (184331 ms)</td>
+<tr><td>Total time:</td><td>164 seconds (164339 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,113 +76,21 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testcase.LocatorsAndActionsPractise.fillFormAndSelectDate()'><b>fillFormAndSelectDate</b><br>Test class: testcase.LocatorsAndActionsPractise<br>Parameters: John Cena, john@cena.com, 987654321, United States of America, Male, United States, Blue, Elephant, Wednesday, Random book, Ye to Pata nahi, 10, July, 2027</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.wikipedia\-search\-input&quot;}
-  (Session info: chrome=140.0.7339.80)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;15.4.1&apos;, java.version: &apos;23.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b456f8692e3e5e5930c3d02ad12e746b, findElement {using=class name, value=wikipedia-search-input}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.80, chrome: {chromedriverVersion: 140.0.7339.80 (670b6f192f46..., userDataDir: /var/folders/fh/mrx4vbm562g...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51527}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51527/devtoo..., se:cdpVersion: 140.0.7339.80, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b456f8692e3e5e5930c3d02ad12e746b
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-	at pages.mouseActionsAtRightTabs.wikiSearch(mouseActionsAtRightTabs.java:22)
-	at testcase.LocatorsAndActionsPractise.fillFormAndSelectDate(LocatorsAndActionsPractise.java:62)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2085646490", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2085646490'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.wikipedia\-search\-input&quot;}
-  (Session info: chrome=140.0.7339.80)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;15.4.1&apos;, java.version: &apos;23.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b456f8692e3e5e5930c3d02ad12e746b, findElement {using=class name, value=wikipedia-search-input}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.80, chrome: {chromedriverVersion: 140.0.7339.80 (670b6f192f46..., userDataDir: /var/folders/fh/mrx4vbm562g...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51527}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51527/devtoo..., se:cdpVersion: 140.0.7339.80, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b456f8692e3e5e5930c3d02ad12e746b
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-	at pages.mouseActionsAtRightTabs.wikiSearch(mouseActionsAtRightTabs.java:22)
-	at testcase.LocatorsAndActionsPractise.fillFormAndSelectDate(LocatorsAndActionsPractise.java:62)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+<td title='cucumber.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Fill form and select date for calendar using Excel data", "Form Submission with Data"</td>
+<td><div><pre>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at pages.GUIFormPage.enterName(GUIFormPage.java:24)
+	at StepDefinitions.FormSteps.I_fill_the_form_and_calendar_with_Excel_data(FormSteps.java:49)
+	at ✽.I fill the form and calendar with Excel data(file:///Users/adityapargunde/eclipse-workspace/TestAutomationPractiseFramework/src/test/java/cucumber/GUIFormPage.feature:5)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1667737224", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1667737224'><pre>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at pages.GUIFormPage.enterName(GUIFormPage.java:24)
+	at StepDefinitions.FormSteps.I_fill_the_form_and_calendar_with_Excel_data(FormSteps.java:49)
+	at ✽.I fill the form and calendar with Excel data(file:///Users/adityapargunde/eclipse-workspace/TestAutomationPractiseFramework/src/test/java/cucumber/GUIFormPage.feature:5)
 </pre></div></td>
-<td>42</td>
-<td>testcase.LocatorsAndActionsPractise@18317edc</td></tr>
+<td>7</td>
+<td>cucumber.TestNGTestRunner@49dc7102</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -193,25 +101,30 @@ Session ID: b456f8692e3e5e5930c3d02ad12e746b
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='testcase.LocatorsAndActionsPractise.fillFormAndSelectDate()'><b>fillFormAndSelectDate</b><br>Test class: testcase.LocatorsAndActionsPractise<br>Parameters: John Cena, john@cena.com, 987654321, United States of America, Male, United States, Blue, Elephant, Wednesday, Random book, Ye to Pata nahi, 10, July, 2027</td>
+<td></td>
+<td>34</td>
+<td>testcase.LocatorsAndActionsPractise@2cd2a21f</td></tr>
+<tr>
 <td title='testcase.LocatorsAndActionsPractise.fillFormAndSelectDate()'><b>fillFormAndSelectDate</b><br>Test class: testcase.LocatorsAndActionsPractise<br>Parameters: Anita, test@example.com, 7890, SusGaon, Female, India, Yellow, Zebra, Friday, Learn Selenium, Wireless Mouse 20, 10, December, 2023</td>
 <td></td>
-<td>15</td>
-<td>testcase.LocatorsAndActionsPractise@18317edc</td></tr>
-<tr>
-<td title='testcase.LocatorsAndActionsPractise.fillFormAndSelectDate()'><b>fillFormAndSelectDate</b><br>Test class: testcase.LocatorsAndActionsPractise<br>Parameters: Aditya, aditya@xyz.com, 1234, Pune, Male, India, Blue, Dog, Monday, Learn Selenium, Laptop, 15, August, 2025</td>
-<td></td>
 <td>16</td>
-<td>testcase.LocatorsAndActionsPractise@18317edc</td></tr>
+<td>testcase.LocatorsAndActionsPractise@2cd2a21f</td></tr>
 <tr>
 <td title='testcase.LocatorsAndActionsPractise.fillFormAndSelectDate()'><b>fillFormAndSelectDate</b><br>Test class: testcase.LocatorsAndActionsPractise<br>Parameters: Rajan, rajan@test.com, 5678, Solapur, Male, India, Green, Giraffe, Tuesday, Master in Java, Fitness Tracker, 5, October, 2026</td>
 <td></td>
-<td>12</td>
-<td>testcase.LocatorsAndActionsPractise@18317edc</td></tr>
+<td>13</td>
+<td>testcase.LocatorsAndActionsPractise@2cd2a21f</td></tr>
+<tr>
+<td title='testcase.LocatorsAndActionsPractise.fillFormAndSelectDate()'><b>fillFormAndSelectDate</b><br>Test class: testcase.LocatorsAndActionsPractise<br>Parameters: Aditya, aditya@xyz.com, 1234, Pune, Male, India, Blue, Dog, Monday, Learn Selenium, Laptop, 15, August, 2025</td>
+<td></td>
+<td>18</td>
+<td>testcase.LocatorsAndActionsPractise@2cd2a21f</td></tr>
 <tr>
 <td title='testcase.LocatorsAndActionsPractise.fillFormAndSelectDate()'><b>fillFormAndSelectDate</b><br>Test class: testcase.LocatorsAndActionsPractise<br>Parameters: Gauravi, gaura@busy.com, 3456, Uruli, Female, India, Red, Cat, Sunday, Learn JS, Action Camera, 20, September, 2024</td>
 <td></td>
-<td>51</td>
-<td>testcase.LocatorsAndActionsPractise@18317edc</td></tr>
+<td>23</td>
+<td>testcase.LocatorsAndActionsPractise@2cd2a21f</td></tr>
 </table><p>
 </body>
 </html>

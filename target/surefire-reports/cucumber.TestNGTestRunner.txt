@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: cucumber.TestNGTestRunner
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 22.08 s <<< FAILURE! -- in cucumber.TestNGTestRunner
+cucumber.TestNGTestRunner.runScenario["Fill form and select date for calendar using Excel data", "Form Submission with Data"](1) -- Time elapsed: 21.19 s <<< FAILURE!
+java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at pages.GUIFormPage.enterName(GUIFormPage.java:24)
+	at StepDefinitions.FormSteps.I_fill_the_form_and_calendar_with_Excel_data(FormSteps.java:49)
+	at ✽.I fill the form and calendar with Excel data(file:///Users/adityapargunde/eclipse-workspace/TestAutomationPractiseFramework/src/test/java/cucumber/GUIFormPage.feature:5)
+

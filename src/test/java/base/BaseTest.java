@@ -21,83 +21,92 @@ import org.testng.annotations.BeforeMethod;
 
 public class BaseTest {
 
-    private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
-    private static Properties config = new Properties();
+	private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+	private static Properties config = new Properties();
 
-    static {
-        try {
-            FileInputStream fis = new FileInputStream(
-                    System.getProperty("user.dir") + "/src/test/resources/testdata.properties");
-            config.load(fis);
-            fis.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+	static {
+		try {
+			FileInputStream fis = new FileInputStream(
+					System.getProperty("user.dir") + "/src/test/resources/testdata.properties");
+			config.load(fis);
+			fis.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 
-    public static WebDriver getDriver() {
-        return driver.get();
-    }
+	public static WebDriver getDriver() {
+		return driver.get();
+	}
 
-    // ✅ Helper methods
-    public static WebDriverWait getWait(long seconds) {
-        return new WebDriverWait(getDriver(), Duration.ofSeconds(seconds));
-    }
+	// Helper methods
+	public static WebDriverWait getWait(long seconds) {
+		return new WebDriverWait(getDriver(), Duration.ofSeconds(seconds));
+	}
 
-    public static JavascriptExecutor getJS() {
-        return (JavascriptExecutor) getDriver();
-    }
+	public static JavascriptExecutor getJS() {
+		return (JavascriptExecutor) getDriver();
+	}
 
-    public static Actions getActions() {
-        return new Actions(getDriver());
-    }
+	public static Actions getActions() {
+		return new Actions(getDriver());
+	}
 
-    @BeforeMethod(alwaysRun = true)
-    public void setUp() {
-        String browser = config.getProperty("browser", "chrome").toLowerCase();
-        boolean isHeadless = Boolean.parseBoolean(config.getProperty("headless", "false"));
-        WebDriver webDriver;
+	@BeforeMethod(alwaysRun = true)
+	public void setUp() {
+		String browser = config.getProperty("browser", "chrome").toLowerCase();
 
-        switch (browser) {
-        case "firefox":
-            FirefoxOptions ffOptions = new FirefoxOptions();
-            if (isHeadless) ffOptions.addArguments("--headless");
-            webDriver = new FirefoxDriver(ffOptions);
-            break;
+		// Headless: check system property first, fallback to testdata.properties
+		String headlessProp = System.getProperty("headless");
+		boolean isHeadless = headlessProp != null ? Boolean.parseBoolean(headlessProp)
+				: Boolean.parseBoolean(config.getProperty("headless", "false"));
+		WebDriver webDriver;
 
-        case "edge":
-            EdgeOptions edgeOptions = new EdgeOptions();
-            if (isHeadless) edgeOptions.addArguments("--headless=new");
-            webDriver = new EdgeDriver(edgeOptions);
-            break;
-            
-        case "safari":
-            // Safari doesn’t support headless mode
-            webDriver = new SafariDriver();
-            break;
+		switch (browser) {
+		case "firefox":
+			FirefoxOptions ffOptions = new FirefoxOptions();
+			if (isHeadless)
+				ffOptions.addArguments("--headless");
+			webDriver = new FirefoxDriver(ffOptions);
+			break;
 
-        case "chrome":
-        default:
-            ChromeOptions chromeOptions = new ChromeOptions();
-            if (isHeadless) chromeOptions.addArguments("--headless=new");
-            chromeOptions.addArguments("--start-maximized");
-            webDriver = new ChromeDriver(chromeOptions);
-            break;
-        }
+		case "edge":
+			EdgeOptions edgeOptions = new EdgeOptions();
+			if (isHeadless)
+				edgeOptions.addArguments("--headless=new");
+			webDriver = new EdgeDriver(edgeOptions);
+			break;
 
-        driver.set(webDriver);
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        getDriver().manage().window().maximize();
+		case "safari":
+			// Safari doesn’t support headless mode
+			webDriver = new SafariDriver();
+			break;
 
-        String url = config.getProperty("baseURL");
-        getDriver().get(url);
-    }
+		case "chrome":
+		default:
+			ChromeOptions chromeOptions = new ChromeOptions();
+			if (isHeadless) {
+				chromeOptions.addArguments("--headless=new"); // headless mode
+			} else {
+				chromeOptions.addArguments("--start-maximized"); // normal GUI
+			}
+			webDriver = new ChromeDriver(chromeOptions);
+			break;
+		}
 
-    @AfterMethod(alwaysRun = true)
-    public void tearDown() {
-        if (getDriver() != null) {
-            getDriver().quit();
-            driver.remove();
-        }
-    }
+		driver.set(webDriver);
+		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		getDriver().manage().window().maximize();
+
+		String url = config.getProperty("baseURL");
+		getDriver().get(url);
+	}
+
+	@AfterMethod(alwaysRun = true)
+	public void tearDown() {
+		if (getDriver() != null) {
+			getDriver().quit();
+			driver.remove();
+		}
+	}
 }

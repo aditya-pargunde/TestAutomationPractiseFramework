@@ -3,13 +3,13 @@
 <suite name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="5" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="testcase.LocatorsAndActionsPractise">
+      <class name="cucumber.TestNGTestRunner">
         <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="fillFormAndSelectDate" invocation-numbers="1 3"/>
+          <include name="setUpClass"/>
+          <include name="tearDownClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
         </methods>
-      </class> <!-- testcase.LocatorsAndActionsPractise -->
+      </class> <!-- cucumber.TestNGTestRunner -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->
